@@ -1,0 +1,4 @@
+return {
+	"codespell",
+	"dcm",
+}

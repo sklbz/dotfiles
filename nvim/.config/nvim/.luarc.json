@@ -1,0 +1,7 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "color_overrides",
+        "nvim_create_buf"
+    ]
+}
