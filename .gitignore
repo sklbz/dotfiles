@@ -1,0 +1,67 @@
+# Compiled Lua sources
+luac.out
+**/luac.out
+
+# luarocks build files
+*.src.rock
+**/*.src.rock
+*.zip
+**/*.zip
+*.tar.gz
+**/*.tar.gz
+
+# Object files
+*.o
+**/*.o
+*.os
+**/*.os
+*.ko
+**/*.ko
+*.obj
+**/*.obj
+*.elf
+**/*.elf
+
+# Precompiled Headers
+*.gch
+**/*.gch
+*.pch
+**/*.pch
+
+# Libraries
+*.lib
+**/*.lib
+*.a
+**/*.a
+*.la
+**/*.la
+*.lo
+**/*.lo
+*.def
+**/*.def
+*.exp
+**/*.exp
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+**/*.dll
+*.so
+**/*.so
+*.so.*
+**/*.so.*
+*.dylib
+**/*.dylib
+
+# Executables
+*.exe
+**/*.exe
+*.out
+**/*.out
+*.app
+**/*.app
+*.i*86
+**/*.i*86
+*.x86_64
+**/*.x86_64
+*.hex
+**/*.hex
