@@ -1,2 +1,2 @@
-require("core.autocmd_")
-require("core.mapping_")
+require("lua.core.autocmd_")
+require("lua.core.mapping_")
