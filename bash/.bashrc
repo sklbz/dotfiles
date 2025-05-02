@@ -23,19 +23,19 @@ export PATH="/usr/bin/flutter/bin:$PATH"
 
 PS1='[\u@\h \W]\$ '
 
-if [ "$TERM_PROGRAM" = tmux ]; then
-	fastfetch
-else
+# if [ "$TERM_PROGRAM" = tmux ]; then
+	# fastfetch
+# else
 	list=$(yay -Qu)
 
 	if ! { [ -z "$list" ]; }; then
 		yay
 	fi
 
-	if [ -z "$NVIM" ]; then
+	# if [ -z "$NVIM" ]; then
 		# tmux
-	fi
-fi
+	# fi
+# fi
 
 export STARSHIP_CONFIG=~/.config/starship/catppuccin-powerline.toml
 
