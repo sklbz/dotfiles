@@ -33,7 +33,7 @@ else
 	fi
 
 	if [ -z "$NVIM" ]; then
-		tmux
+		# tmux
 	fi
 fi
 
