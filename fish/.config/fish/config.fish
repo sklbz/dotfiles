@@ -4,6 +4,8 @@ end
 
 set -x STARSHIP_CONFIG ~/.config/starship/default.toml
 
+set -x EDITOR nvim
+
 source ~/.config/fish/alias.fish
 
 starship init fish | source

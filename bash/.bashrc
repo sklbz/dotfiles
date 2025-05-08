@@ -21,20 +21,23 @@ alias gitsync='git push && git push'
 # Flutter path
 export PATH="/usr/bin/flutter/bin:$PATH"
 
+# Default text editor
+export EDITOR=nvim
+
 PS1='[\u@\h \W]\$ '
 
 # if [ "$TERM_PROGRAM" = tmux ]; then
-	# fastfetch
+# fastfetch
 # else
-	list=$(yay -Qu)
+list=$(yay -Qu)
 
-	if ! { [ -z "$list" ]; }; then
-		yay
-	fi
+if ! { [ -z "$list" ]; }; then
+	yay
+fi
 
-	# if [ -z "$NVIM" ]; then
-		# tmux
-	# fi
+# if [ -z "$NVIM" ]; then
+# tmux
+# fi
 # fi
 
 export STARSHIP_CONFIG=~/.config/starship/catppuccin-powerline.toml
