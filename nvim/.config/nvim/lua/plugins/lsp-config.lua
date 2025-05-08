@@ -34,7 +34,7 @@ return {
 
 				lspconf[lsp .. suffix].setup({
 					capabilities = capabilities,
-					opts,
+					-- opts,
 				})
 			end
 

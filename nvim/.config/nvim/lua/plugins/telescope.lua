@@ -4,6 +4,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope-ui-select.nvim",
+		"BurntSushi/ripgrep",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 
