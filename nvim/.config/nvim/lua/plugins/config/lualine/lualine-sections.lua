@@ -28,7 +28,6 @@ return {
 				}
 				return {
 					fg = mode_color[vim.fn.mode()],
-					gui = "bold",
 					bg = "",
 				}
 			end,
@@ -96,7 +95,7 @@ return {
 					-- ['!'] = colors.red,
 					-- t = colors.red,
 				}
-				return { fg = mode_color[vim.fn.mode()], gui = "bold" }
+				return { fg = mode_color[vim.fn.mode()] }
 			end,
 		},
 	},
