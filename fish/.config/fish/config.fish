@@ -8,4 +8,6 @@ set -x EDITOR nvim
 
 source ~/.config/fish/alias.fish
 
+set PATH $PATH ~/.cargo/bin
+
 starship init fish | source
