@@ -7,7 +7,6 @@ set -x STARSHIP_CONFIG ~/.config/starship/default.toml
 set -x EDITOR nvim
 
 source ~/.config/fish/alias.fish
-
-set PATH $PATH ~/.cargo/bin
+source ~/.config/fish/path.fish
 
 starship init fish | source
