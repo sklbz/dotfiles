@@ -5,6 +5,13 @@ return {
 		lazy = false, -- This plugin is already lazy
 	},
 	{
+		"cordx56/rustowl",
+		version = "*", -- Latest stable version
+		build = "cargo install rustowl",
+		lazy = false, -- This plugin is already lazy
+		opts = {},
+	},
+	{
 		"saecki/crates.nvim",
 		ft = { "toml", "rust" },
 		config = function()
