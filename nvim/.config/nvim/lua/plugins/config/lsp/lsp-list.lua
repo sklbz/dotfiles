@@ -6,4 +6,5 @@ return {
 	"rust_analyzer",
 	"ts_ls",
 	"tailwindcss-language-server",
+	"ocaml-lsp",
 }

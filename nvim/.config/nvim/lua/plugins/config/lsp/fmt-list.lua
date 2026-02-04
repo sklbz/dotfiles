@@ -4,4 +4,5 @@ return {
 	"shfmt",
 	"stylua",
 	"yamlfmt",
+	"ocamlformat",
 }
