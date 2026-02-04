@@ -29,4 +29,7 @@ vim.opt.splitbelow = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Change end of buffer character to blank spaces
+vim.opt.fillchars = { eob = " " }
+
 require("config.utils.utils_")
