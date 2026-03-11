@@ -14,15 +14,9 @@ return {
 		"neovim/nvim-lspconfig",
 		lazy = false,
 		config = function()
-			local lspconf = require("lspconfig")
-
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 			local lsp_list = require("plugins.config.lsp.lsp-list")
-
-			local lsp_settings = {
-				rust = require("plugins.config.lsp.rust-analyzer-opts"),
-			}
 
 			for _, lsp in ipairs(lsp_list) do
 				local suffix = lsp == "dcm" and "ls" or ""
@@ -32,10 +26,16 @@ return {
 					break
 				end
 
-				lspconf[lsp .. suffix].setup({
-					capabilities = capabilities,
-					-- opts,
-				})
+				local lsp_name = lsp == "json-lsp" and "jsonls" or lsp
+
+				local lsp_server = lsp_name .. suffix
+
+				if lsp ~= "rust_analyzer" then
+					vim.lsp.config(lsp_server, {
+						capabilities = capabilities,
+						-- opts,
+					})
+				end
 			end
 
 			require("plugins.config.lsp.keymaps")

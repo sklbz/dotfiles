@@ -7,4 +7,5 @@ return {
 	"ts_ls",
 	"tailwindcss-language-server",
 	"ocaml-lsp",
+	"json-lsp",
 }
