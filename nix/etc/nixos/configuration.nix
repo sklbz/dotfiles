@@ -6,6 +6,7 @@
     <nixos-wsl/modules>
     ./modules/packages.nix
 		./modules/users.nix
+		./modules/network.nix
   ];
 
   wsl.enable = true;
