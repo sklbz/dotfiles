@@ -4,9 +4,7 @@
   imports = [
     # include NixOS-WSL modules
     <nixos-wsl/modules>
-    ./modules/packages.nix
-		./modules/users.nix
-		./modules/network.nix
+		./modules/modules.nix
   ];
 
   wsl.enable = true;
