@@ -1,0 +1,3 @@
+os:
+  edit: nvim
+  editAtLine: "nvim +{{line}} {{filename}}"
