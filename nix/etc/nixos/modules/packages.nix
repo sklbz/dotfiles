@@ -3,13 +3,13 @@
 {
   environment.systemPackages = with pkgs; [
     neovim
+		lazygit
+		yazi
     git
     gh
     tmux
-    fastfetch
     stow
 		starship
-		ffmpeg
 		zig
   ];
 
