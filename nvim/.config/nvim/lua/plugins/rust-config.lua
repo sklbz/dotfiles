@@ -3,6 +3,66 @@ return {
 		"mrcjkb/rustaceanvim",
 		version = "^5", -- Recommended
 		lazy = false, -- This plugin is already lazy
+		init = function()
+			vim.g.rustaceanvim = {
+
+				-- ── Outils (inlay hints, etc.) ───────────────────────────────
+				tools = {
+					hover_actions = { auto_focus = true },
+					inlay_hints = { auto = true },
+				},
+
+				-- ── Serveur LSP ──────────────────────────────────────────────
+				server = {
+					on_attach = function(client, bufnr)
+						local opts = { buffer = bufnr, silent = true }
+
+						-- Actions rust-analyzer
+						vim.keymap.set("n", "<leader>rr", function()
+							vim.cmd.RustLsp("runnables")
+						end, vim.tbl_extend("force", opts, { desc = "Runnables" }))
+
+						vim.keymap.set("n", "<leader>rd", function()
+							vim.cmd.RustLsp("debuggables")
+						end, vim.tbl_extend("force", opts, { desc = "Debuggables" }))
+					end,
+
+					settings = {
+						["rust-analyzer"] = {
+
+							-- ── Supprime les doublons ──────────────────────────────
+							checkOnSave = true,
+							check = {
+								command = "clippy", -- une seule source
+								extraArgs = { "--", "-W", "clippy::all" },
+							},
+							diagnostics = {
+								enable = true,
+								enableExperimental = false, -- désactive la 2e source
+							},
+
+							-- ── Qualité des suggestions ────────────────────────────
+							cargo = {
+								allFeatures = true,
+								loadOutDirsFromCheck = true,
+							},
+							procMacro = {
+								enable = true,
+							},
+						},
+					},
+				},
+
+				-- ── Intégration DAP (debug) ──────────────────────────────────
+				dap = {
+					adapter = {
+						type = "executable",
+						command = "codelldb", -- nécessite codelldb installé via mason
+						name = "codelldb",
+					},
+				},
+			}
+		end,
 	},
 	{
 		"cordx56/rustowl",

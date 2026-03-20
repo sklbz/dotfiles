@@ -46,3 +46,13 @@ fish
 
 eval "$(starship init bash)"
 . "$HOME/.cargo/env"
+
+# CUDA — ajouté par setup_arch_4070.sh
+export CUDA_HOME=/opt/cuda
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
+# pyenv — ajouté par setup_arch_4070.sh
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

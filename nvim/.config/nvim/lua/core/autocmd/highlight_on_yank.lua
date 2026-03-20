@@ -6,9 +6,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
 	callback = function()
 		if vim.api.nvim_get_mode().mode ~= "n" then
-			vim.highlight.on_yank({ higroup = "nYankHighlight", timeout = 300 })
+			vim.hl.on_yank({ higroup = "nYankHighlight", timeout = 300 })
 		else
-			vim.highlight.on_yank({ higroup = "vYankHighlight", timeout = 300 })
+			vim.hl.on_yank({ higroup = "vYankHighlight", timeout = 300 })
 		end
 	end,
 })

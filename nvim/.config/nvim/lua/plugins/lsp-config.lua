@@ -8,7 +8,14 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		opts = {},
+		opts = {
+			handlers = {
+				-- Bloquer rust_analyzer — géré par rustaceanvim
+				["rust_analyzer"] = function()
+					-- intentionnellement vide
+				end,
+			},
+		},
 	},
 	{
 		"neovim/nvim-lspconfig",
@@ -23,6 +30,10 @@ return {
 
 				-- local opts = lsp == "rust_analyzer" and lsp_settings.rust or {}
 				if lsp == "rust_analyzer" then
+					vim.lsp.config(lsp, {
+						cmd = nil,
+						filetypes = {},
+					})
 					break
 				end
 
@@ -35,6 +46,7 @@ return {
 						capabilities = capabilities,
 						-- opts,
 					})
+					vim.lsp.enable(lsp_server)
 				end
 			end
 
