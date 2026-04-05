@@ -50,6 +50,11 @@ return {
 				end
 			end
 
+			vim.lsp.config("leanls", {
+				capabilities = capabilities,
+			})
+			vim.lsp.enable("leanls")
+
 			require("plugins.config.lsp.keymaps")
 		end,
 	},
