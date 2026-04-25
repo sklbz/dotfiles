@@ -1,5 +1,6 @@
+-- lua/plugins/config/lsp/fmt-list.lua
 return {
-	"ast_grep",
+	"ast-grep",
 	"dcm",
 	"shfmt",
 	"stylua",

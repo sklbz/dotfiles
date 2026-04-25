@@ -1,6 +1,7 @@
 return {
 	{
 		"mrcjkb/rustaceanvim",
+		ft = { "rust", "toml" },
 		version = "^5", -- Recommended
 		lazy = false, -- This plugin is already lazy
 		init = function()
@@ -14,7 +15,7 @@ return {
 
 				-- ── Serveur LSP ──────────────────────────────────────────────
 				server = {
-					on_attach = function(client, bufnr)
+					on_attach = function(_, bufnr)
 						local opts = { buffer = bufnr, silent = true }
 
 						-- Actions rust-analyzer
@@ -66,6 +67,7 @@ return {
 	},
 	{
 		"cordx56/rustowl",
+		ft = { "rust" },
 		version = "*", -- Latest stable version
 		build = "cargo install rustowl",
 		lazy = false, -- This plugin is already lazy

@@ -1,3 +1,4 @@
+-- lua/plugins/lean.lua
 return {
 	"Julian/lean.nvim",
 	event = { "BufReadPre *.lean", "BufNewFile *.lean" },
@@ -15,7 +16,18 @@ return {
 	},
 
 	---@type lean.Config
-	opts = { -- see below for full configuration options
-		mappings = true,
+	opts = {
+		mappings = false,
+		lsp = {
+			enable = true,
+			on_attach = function(_, bufnr)
+				vim.keymap.set("n", "<leader>li", function()
+					vim.cmd("LeanInfoViewToggle")
+				end, {
+					buffer = bufnr,
+					desc = "Toggle Infoview",
+				})
+			end,
+		},
 	},
 }

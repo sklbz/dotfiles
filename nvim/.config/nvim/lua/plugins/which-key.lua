@@ -12,6 +12,7 @@ return {
 			{ "<leader>p", group = "pane", mode = "n" },
 			{ "<leader>s", group = "search", mode = "n" },
 			{ "<leader>x", group = "diagnostics", mode = "n" },
+			{ "<leader>l", group = "Lean", mode = "n" },
 		},
 		win = {
 			border = "rounded", -- style du cadre : single, double, rounded, solid
