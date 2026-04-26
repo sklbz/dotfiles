@@ -1,3 +1,4 @@
+-- lua/plugins/git-signs.lua
 return {
 	{
 		"tpope/vim-fugitive",

@@ -1,3 +1,4 @@
+-- lua/plugins/catppuccin.lua
 return {
 	"catppuccin/nvim",
 	name = "catppuccin",

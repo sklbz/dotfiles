@@ -1,3 +1,4 @@
+-- lua/config/term.lua
 local api = vim.api
 
 -- api.nvim_command("autocmd TermOpen * startinsert") -- starts in insert mode

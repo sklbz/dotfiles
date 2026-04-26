@@ -1,3 +1,4 @@
+-- lua/config/vim-options.lua
 vim.cmd("set shiftwidth=2")
 vim.cmd("set tabstop=2")
 vim.g.mapleader = " "
@@ -31,5 +32,3 @@ vim.opt.scrolloff = 10
 
 -- Change end of buffer character to blank spaces
 vim.opt.fillchars = { eob = " " }
-
-require("config.utils.utils_")

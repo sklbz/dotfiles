@@ -1,2 +1,2 @@
-require("config_")
-require("core_")
+-- init.lua
+require("config")

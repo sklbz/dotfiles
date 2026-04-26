@@ -1,3 +1,4 @@
+-- lua/plugins/nvim-tmux-nav.lua
 return {
 	"alexghergh/nvim-tmux-navigation",
 	opts = {},

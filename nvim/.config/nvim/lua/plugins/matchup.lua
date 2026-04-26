@@ -1,3 +1,4 @@
+-- lua/plugins/matchup.lua
 return {
 	"andymass/vim-matchup",
 	init = function()

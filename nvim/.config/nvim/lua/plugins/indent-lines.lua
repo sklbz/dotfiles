@@ -1,3 +1,4 @@
+-- lua/plugins/indent-lines.lua
 return {
 	"lukas-reineke/indent-blankline.nvim",
 	event = "BufReadPost",

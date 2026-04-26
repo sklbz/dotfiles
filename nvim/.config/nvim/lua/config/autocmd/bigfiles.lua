@@ -1,3 +1,4 @@
+-- lua/config/autocmd/bigfiles.lua
 vim.api.nvim_create_autocmd("BufReadPost", {
 	pattern = "*",
 	callback = function(args)

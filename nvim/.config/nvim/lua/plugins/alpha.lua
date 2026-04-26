@@ -1,3 +1,4 @@
+-- lua/plugins/alpha.lua
 return {
 	"goolord/alpha-nvim",
 	dependencies = {

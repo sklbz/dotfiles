@@ -17,9 +17,7 @@ return {
 			local lsp_list = {
 				"bashls",
 				"clangd",
-				"dcmls",
 				"lua_ls",
-				"tsserver",
 				"tailwindcss",
 				"ocamllsp",
 				"jsonls",

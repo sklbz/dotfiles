@@ -1,12 +1,12 @@
+-- lua/plugins/rust-config.lua
 return {
 	{
 		"mrcjkb/rustaceanvim",
 		ft = { "rust", "toml" },
-		version = "^5", -- Recommended
-		lazy = false, -- This plugin is already lazy
+		version = "^5",
+		lazy = false,
 		init = function()
 			vim.g.rustaceanvim = {
-
 				-- ── Outils (inlay hints, etc.) ───────────────────────────────
 				tools = {
 					hover_actions = { auto_focus = true },
@@ -27,33 +27,7 @@ return {
 							vim.cmd.RustLsp("debuggables")
 						end, vim.tbl_extend("force", opts, { desc = "Debuggables" }))
 					end,
-
-					settings = {
-						["rust-analyzer"] = {
-
-							-- ── Supprime les doublons ──────────────────────────────
-							checkOnSave = true,
-							check = {
-								command = "clippy", -- une seule source
-								extraArgs = { "--", "-W", "clippy::all" },
-							},
-							diagnostics = {
-								enable = true,
-								enableExperimental = false, -- désactive la 2e source
-							},
-
-							-- ── Qualité des suggestions ────────────────────────────
-							cargo = {
-								allFeatures = true,
-								loadOutDirsFromCheck = true,
-							},
-							procMacro = {
-								enable = true,
-							},
-						},
-					},
 				},
-
 				-- ── Intégration DAP (debug) ──────────────────────────────────
 				dap = {
 					adapter = {
