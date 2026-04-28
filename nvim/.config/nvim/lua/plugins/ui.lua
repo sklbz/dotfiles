@@ -182,7 +182,7 @@ return {
 					return " " .. mode_name() .. " "
 				end,
 				hl = function()
-					return { fg = mode_color(), bold = true }
+					return { fg = mode_color(), bold = false }
 				end,
 			}
 
