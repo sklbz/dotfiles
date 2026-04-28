@@ -1,4 +1,4 @@
--- lua/plugins/lean.lua
+-- lua/plugins/langs/lean.lua
 return {
 	"Julian/lean.nvim",
 	event = { "BufReadPre *.lean", "BufNewFile *.lean" },

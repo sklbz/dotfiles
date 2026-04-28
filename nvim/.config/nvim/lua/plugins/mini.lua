@@ -6,6 +6,7 @@ return {
 		require("mini.ai").setup()
 		require("mini.comment").setup()
 		require("mini.surround").setup({
+			n_lines = 100,
 			mappings = {
 				add = "gsa",
 				delete = "gsd",

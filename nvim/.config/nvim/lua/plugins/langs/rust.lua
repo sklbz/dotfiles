@@ -1,4 +1,4 @@
--- lua/plugins/rust-config.lua
+-- lua/plugins/langs/rust.lua
 return {
 	{
 		"mrcjkb/rustaceanvim",
