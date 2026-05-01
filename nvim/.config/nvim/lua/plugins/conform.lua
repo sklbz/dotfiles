@@ -4,17 +4,24 @@ return {
 	event = { "BufWritePre" },
 	config = function()
 		require("conform").setup({
+			formatters = {
+				leanfmt = {
+					command = "leanfmt",
+					stdin = false,
+					args = { "$RELATIVE_FILEPATH", "--write" },
+				},
+			},
 			formatters_by_ft = {
 				["*"] = { "trim_whitespace", "trim_newlines" },
+				lean = { "leanfmt" },
 				rust = { "rustfmt" },
-				lean = { "lsp" },
 				lua = { "stylua" },
 				sh = { "shfmt" },
 				ocaml = { "ocamlformat" },
 			},
 
 			format_on_save = {
-				timeout_ms = 2000,
+				timeout_ms = 500,
 				lsp_fallback = true,
 			},
 		})

@@ -1,6 +1,7 @@
 -- lua/plugins/langs/lean.lua
 return {
 	"Julian/lean.nvim",
+	ft = { "lean" },
 	event = { "BufReadPre *.lean", "BufNewFile *.lean" },
 	opts = {
 		mappings = false,
@@ -23,5 +24,8 @@ return {
 				end, { buffer = bufnr, desc = "Toggle Infoview" })
 			end,
 		})
+
+		vim.keymap.set("i", "<A-a>", "∀", { noremap = true, silent = true })
+		vim.keymap.set("i", "<A-e>", "∃", { noremap = true, silent = true })
 	end,
 }
