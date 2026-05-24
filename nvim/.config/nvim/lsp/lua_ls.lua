@@ -1,6 +1,6 @@
 -- lsp/lua_ls.lua
 return {
-	capabilities = require("cmp_nvim_lsp").default_capabilities(),
+	capabilities = require("lsp.default").capabilities,
 	settings = {
 		Lua = {
 			diagnostics = {

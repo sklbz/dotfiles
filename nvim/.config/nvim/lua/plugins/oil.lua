@@ -8,6 +8,30 @@ return {
 				winhl = "Normal:OilNormal,FloatBorder:OilBorder",
 			},
 		},
+		keymaps = {
+			["gx"] = {
+				callback = function()
+					local oil = require("oil")
+
+					-- Full path of entry under cursor
+					local entry = oil.get_cursor_entry()
+					if not entry then
+						return
+					end
+
+					local dir = oil.get_current_dir()
+					local path = dir .. entry.name
+
+					-- compress with xz -e
+					vim.fn.jobstart({ "xz", "-e", path }, {
+						detach = true,
+					})
+
+					print("Compressing: " .. path)
+				end,
+				desc = "Compress file with xz -e",
+			},
+		},
 	},
 	config = function(_, opts)
 		local oil = require("oil")
